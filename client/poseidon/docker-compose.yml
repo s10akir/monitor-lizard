@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  platformio:
+    image: s10akir/platformio
+    build:
+      context: ../
+    volumes:
+      - ./:/usr/local/poseidon
+      - ./.platformio:/root/.platformio
+    working_dir: /usr/local/poseidon/
